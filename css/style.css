@@ -86,7 +86,6 @@ main{
     width: 50%;
     border-radius: 10px;
     margin-left: 25%;
-    color: var(--light-blue);
 }
 
 
@@ -100,7 +99,7 @@ main{
 /*Exchanges*/
 .pais{
     display: flex;
-    color: var(--light-blue);
+    
     justify-content: space-between;
     align-content: center;
     margin: .3em;
