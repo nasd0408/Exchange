@@ -362,11 +362,15 @@ footer{
     .pais{
         width: 80%;
     }
+    .contactos,
     .bancos,
     .grid{
         grid-template-columns: 1fr;
         justify-items: center;
         
+    }
+    .contactos h1{
+        grid-column: auto;
     }
     .paypal{
         grid-column: auto;
