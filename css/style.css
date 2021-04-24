@@ -123,7 +123,7 @@ main{
     transform: scale(1.05);
 }
 
-.pais:hover span:nth-child(1){
+.pais span:nth-child(1){
     position: absolute;
     top: 0;
     left: 0;
@@ -141,7 +141,7 @@ main{
         transform: translateX(100%);
     }
 }
-.pais:hover span:nth-child(2){
+.pais span:nth-child(2){
     position: absolute;
     top: 0;
     right: 0;
@@ -159,7 +159,7 @@ main{
         transform: translateY(100%);
     }
 }
-.pais:hover span:nth-child(3){
+.pais span:nth-child(3){
     position: absolute;
     bottom: 0;
     left: 0;
@@ -178,7 +178,7 @@ main{
         transform: translateX(-100%);
     }
 }
-.pais:hover span:nth-child(4){
+.pais span:nth-child(4){
     position: absolute;
     top: 0;
     left: 0;
@@ -248,6 +248,7 @@ main{
     grid-template-columns: 1fr;
     margin: 30px;
     padding: 10px;
+    justify-items: center;
     
 }
 .person{
@@ -255,10 +256,19 @@ main{
     display: flex;
     text-align: left;
     margin-top: 30px;
-    
+    width: 600px;
+    transition: .8s;
+}
+.person:hover{
+    transform: scale(1.05);
 }
 .person img{
-    width: 300px;
+    width: 250px;
+    padding: 20px;
+}
+.person-desc{
+    margin: 20px;
+    
 }
 /*MEDIA QUERY*/
 @media (max-width:768px) {
@@ -281,7 +291,14 @@ main{
     .banco{
         margin-top: 30px;
     }
+    .person{
+        display: block;
+        width: 100%;
+        text-align: center;
+        
+    }
     .person img{
-        width: 150px;
+        width: 250px;
+        
     }
 }
