@@ -4,6 +4,7 @@
     margin: 0;
     font-family: 'lato';
     box-sizing: border-box;
+    
 }
 :root{
     --yellow: #f2be54
@@ -38,6 +39,10 @@ header{
     grid-template-columns: 1fr 1fr ;
     align-items: center;
     background: var(--yellow);
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    
     
 
 }
@@ -60,7 +65,8 @@ header a:hover{
     
 }
 header img{
-    width: 50px;
+    width: 70px;
+    height: 70px;
     margin-left: 20px;
 }
 .logo{
@@ -81,7 +87,7 @@ main{
     background-color: var(--dark-blue);
     color:var(--gray);
     text-align: center;
-    padding-top: 30px;
+    padding-top: 100px;
 }
 .title{
     
@@ -218,11 +224,12 @@ main{
 }
 .banco img{
     width: 200px;
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.5);
 }
 .bancos{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 10px;
 }
 .transfers h1{
     margin: 20px;
@@ -245,12 +252,46 @@ main{
 .banco:hover{
     transform: scale(1.02);
 }
+.paypal{
+    grid-column: 2/4;
+}
+
+/*CONTACTOS*/
+
+.contactos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.contactos a{
+    font-size: 50px;
+    color: var(--gray);
+
+}
+.contactos h1{
+    grid-column: 1/4;
+}
+.contacto{
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5) ;
+    width: 300px;
+    align-self: center;
+    justify-self: center;
+    margin-top: 30px;
+    transition: .8s;
+}
+.contacto:hover{
+    color: var(--yellow);
+    transform: scale(1.1);
+}
+.contacto:hover a{
+    color: var(--yellow);
+}
 
 /*ABOUT SECTION*/
 .about{
     display: grid;
     grid-template-columns: 1fr;
-    margin: 30px;
+    margin: 30px 10px 0 10px;
     padding: 10px;
     justify-items: center;
     
@@ -274,6 +315,34 @@ main{
     margin: 20px;
     
 }
+/*FOOTER*/
+footer{
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--yellow);
+    
+}
+.social{
+    font-size: 50px;
+    justify-self: end;
+    margin-right: 30px;
+    align-self: center;
+}
+.social a{
+    color: var(--dark-blue);
+    transition: .8s;
+}
+.social a:hover{
+    transform: scale(1.1);
+    color: var(--gray);
+}
+.footer-text
+{
+    align-self: center;
+    color: var(--dark-blue);
+    margin-left: 30px;
+}
 /*MEDIA QUERY*/
 @media (max-width:768px) {
     header{
@@ -287,16 +356,24 @@ main{
         display: block;
         margin-top: .5em;
     }
+    main{
+        padding-top: 140px;
+    }
     .pais{
         width: 80%;
     }
     .bancos,
     .grid{
         grid-template-columns: 1fr;
+        justify-items: center;
         
+    }
+    .paypal{
+        grid-column: auto;
     }
     .banco{
         margin-top: 30px;
+        width: 80%;
     }
     .person{
         display: block;
