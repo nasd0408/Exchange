@@ -21,8 +21,20 @@
 *:focus{
     outline: none;
 }
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 1.7rem;
+}
+h3{
+    font-size: 1.4rem;
+}
 a{
     text-decoration: none;
+}
+p{
+    font-size: 1.2rem;
 }
 ul{
     list-style: none;
@@ -244,10 +256,12 @@ main{
     box-shadow: 0 20px 50px rgba(0,0,0,0.5) ;
     margin: 10px;
     display: grid;
-    align-content: center;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
     transition: .8s;
     padding: 10px;
+    
 }
 .banco:hover h2{
     color: var(--yellow);
